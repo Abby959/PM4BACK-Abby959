@@ -12,21 +12,21 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({
-        nullable: false
+    @Column('text', {
+        nullable: true
     })
     name: string;
 
-    @Column({
+    @Column('text', {
         unique: true,
-        nullable: false
+        nullable: true
     })
     email: string;
 
-    @Column()
+    @Column('text', { nullable: true })
     address: string;
 
-    @Column()
+    @Column('text', { nullable: true })
     phone: string;
 
     @Column({

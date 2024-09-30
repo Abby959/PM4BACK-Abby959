@@ -14,22 +14,22 @@ export class Product {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column('text', {nullable: true})
   name: string;
 
-  @Column()
+  @Column('text', {nullable: true})
   description: string;
 
-  @Column()
+  @Column('int')
   price: number;
 
-  @Column()
+  @Column('int')
   stock: number;
 
-  @Column()
+  @Column('text', {nullable: true})
   image: string;
 
-  @Column()
+  @Column('int')
   categoryId: number;
 
   @ManyToOne(() => Category, (category) => category.products)

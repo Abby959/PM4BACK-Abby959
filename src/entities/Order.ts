@@ -17,10 +17,10 @@ export class Order {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column('text', { nullable: true })
   status: string;
 
-  @Column()
+  @Column('date', { nullable: true })
   date: Date;
 
   @ManyToOne(() => User, (user) => user.orders)

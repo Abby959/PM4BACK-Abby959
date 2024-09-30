@@ -5,6 +5,6 @@ export class Credential {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column('text', { nullable: true })
     password: string;
 }
